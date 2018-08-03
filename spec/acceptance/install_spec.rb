@@ -15,7 +15,7 @@ describe 'install corp104_python3' do
     it 'should install package' do
       pp = <<-EOS
         class { 'corp104_python3':
-          node_version => '8.8.0'
+          python_version => '3.7.0'
         }
       EOS
 

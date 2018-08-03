@@ -14,7 +14,6 @@ describe 'corp104_python3', :type => 'class' do
     it do
       should contain_class('corp104_python3')
       should contain_class('corp104_python3::install')
-      should contain_class('corp104_python3::install::node')
     end
 
     it do
