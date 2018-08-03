@@ -49,6 +49,4 @@ class corp104_python3 (
   Optional[String] $http_proxy,
 ){
   contain corp104_python3::install
-
-  Class['::corp104_python3::install']
 }

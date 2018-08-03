@@ -1,6 +1,6 @@
 class corp104_python3::install inherits corp104_python3 {
 
-  package { $dep_packages: ensure => present }
+  package { $corp104_python3::dep_packages: ensure => present }
 
   $python_install_source = "https://www.python.org/ftp/python/${corp104_python3::python_version}/Python-${corp104_python3::python_version}.tgz"
 
@@ -30,9 +30,9 @@ class corp104_python3::install inherits corp104_python3 {
 
   exec { 'install-python':
     provider => 'shell',
-    command  => "/tmp/python_install.sh",
+    command  => '/tmp/python_install.sh',
     path     => '/bin:/usr/bin:/usr/local/bin:/usr/sbin',
-    require  => [ Exec['download-source'], File['install-python-script'] ], 
+    require  => [ Exec['download-source'], File['install-python-script'] ],
     unless   => "python3 --version | grep ${corp104_python3::python_version}",
   }
 }
