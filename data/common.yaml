@@ -1,0 +1,17 @@
+corp104_python3::python_version: '3.7.0'
+corp104_python3::python_install_tmp: '/tmp/python_source.tgz'
+corp104_python3::dep_packages:
+  - 'make'
+  - 'build-essential'
+  - 'tk-dev'
+  - 'libssl-dev'
+  - 'zlib1g-dev'
+  - 'libbz2-dev'
+  - 'libsqlite3-dev'
+  - 'libffi-dev'
+  - 'libncursesw5-dev'
+  - 'libgdbm-dev'
+  - 'libc6-dev'
+corp104_python3::prefix: '/opt/python'
+corp104_python3::configure_opt: ~
+corp104_python3::http_proxy: ~

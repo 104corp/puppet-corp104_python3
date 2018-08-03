@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /tmp
+tar zxvf <%= @python_install_tmp %>
+cd Python-<%= @python_version %>/
+./configure
+make
+make install

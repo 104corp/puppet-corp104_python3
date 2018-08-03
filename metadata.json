@@ -1,0 +1,60 @@
+{
+  "name": "104corp-corp104_python3",
+  "description": "corp104_python3 Module for Debian, Ubuntu, CentOS and RHEL.",
+  "version": "2.0.2",
+  "author": "104corp",
+  "summary": "Install, deploysm, and configures python.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/104corp/corp104_python3",
+  "project_page": "https://github.com/104corp/corp104_python3",
+  "issues_url": "https://github.com/104corp/corp104_python3/issues",
+    "tags": [
+    "104",
+    "python",
+    "puppet"
+  ],
+  "dependencies": [
+    {
+      "name": "puppet/archive",
+      "version_requirement": ">= 1.0.0 < 4.0.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": "4.7.0 < 6.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "16.04"
+      ]
+    }
+  ]
+}
+
