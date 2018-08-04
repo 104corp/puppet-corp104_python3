@@ -9,7 +9,7 @@ class corp104_python3::install inherits corp104_python3 {
       provider => 'shell',
       command  => "curl -x ${corp104_python3::http_proxy} -o ${corp104_python3::python_install_tmp} -O ${python_install_source}",
       path     => '/bin:/usr/bin:/usr/local/bin:/usr/sbin',
-      unless   => "python3 --version | grep ${corp104_python3::python_version}",
+      unless   => "/usr/local/bin/python3 --version | grep ${corp104_python3::python_version}",
     }
   }
   else {
@@ -17,7 +17,7 @@ class corp104_python3::install inherits corp104_python3 {
       provider => 'shell',
       command  => "curl -o ${corp104_python3::python_install_tmp} -O ${python_install_source}",
       path     => '/bin:/usr/bin:/usr/local/bin:/usr/sbin',
-      unless   => "python3 --version | grep ${corp104_python3::python_version}",
+      unless   => "/usr/local/bin/python3 --version | grep ${corp104_python3::python_version}",
     }
   }
 
@@ -33,6 +33,6 @@ class corp104_python3::install inherits corp104_python3 {
     command  => '/tmp/python_install.sh',
     path     => '/bin:/usr/bin:/usr/local/bin:/usr/sbin',
     require  => [ Exec['download-source'], File['install-python-script'] ],
-    unless   => "python3 --version | grep ${corp104_python3::python_version}",
+    unless   => "/usr/local/bin/python3 --version | grep ${corp104_python3::python_version}",
   }
 }
