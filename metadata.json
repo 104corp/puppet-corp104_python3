@@ -1,7 +1,7 @@
 {
   "name": "104corp-corp104_python3",
   "description": "corp104_python3 Module for Debian and Ubuntu.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "104corp",
   "summary": "Install, deploysm, and configures python.",
   "license": "Apache-2.0",
