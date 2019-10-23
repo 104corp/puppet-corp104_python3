@@ -1,8 +1,11 @@
 language: ruby
 cache: bundler
-script: bundle exec rake release_checks
+script:
+  - cat Gemfile.lock
+  - bundle exec rake release_checks
 before_install:
 - gem update system
+- rm -f Gemfile.lock
 matrix:
   fast_finish: true
   include:
