@@ -6,7 +6,6 @@ before_install:
 - bundle --version
 - rm -f Gemfile.lock
 script:
-  - cat Gemfile.lock
   - 'bundle exec rake $CHECK'
 matrix:
   fast_finish: true
