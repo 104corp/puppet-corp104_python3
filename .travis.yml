@@ -12,11 +12,19 @@ matrix:
   fast_finish: true
   include:
   - rvm: 2.3.4
-    env: CHECK=beaker PUPPET_INSTALL_TYPE=agent PUPPET_GEM_VERSION="5.3.2" BEAKER_IS_PE=no BEAKER_PUPPET_COLLECTION=puppet5 BEAKER_debug=true BEAKER_set=docker/ubuntu-14.04
+    env: CHECK=beaker PUPPET_INSTALL_TYPE=agent PUPPET_GEM_VERSION="~> 5.0" BEAKER_IS_PE=no BEAKER_PUPPET_COLLECTION=puppet5 BEAKER_setfile=ubuntu1604-64 BEAKER_HYPERVISOR=docker BEAKER_debug=true
     services: docker
     sudo: required
   - rvm: 2.3.4
-    env: CHECK=beaker PUPPET_INSTALL_TYPE=agent PUPPET_GEM_VERSION="5.3.2" BEAKER_IS_PE=no BEAKER_PUPPET_COLLECTION=puppet5 BEAKER_debug=true BEAKER_set=docker/ubuntu-16.04
+    env: CHECK=beaker PUPPET_INSTALL_TYPE=agent PUPPET_GEM_VERSION="~> 5.0" BEAKER_IS_PE=no BEAKER_PUPPET_COLLECTION=puppet5 BEAKER_setfile=centos7-64 BEAKER_HYPERVISOR=docker BEAKER_debug=true
+    services: docker
+    sudo: required
+  - rvm: 2.3.4
+    env: CHECK=beaker PUPPET_INSTALL_TYPE=agent PUPPET_GEM_VERSION="~> 6.0" BEAKER_IS_PE=no BEAKER_PUPPET_COLLECTION=puppet6 BEAKER_setfile=ubuntu1604-64 BEAKER_HYPERVISOR=docker BEAKER_debug=true
+    services: docker
+    sudo: required
+  - rvm: 2.3.4
+    env: CHECK=beaker PUPPET_INSTALL_TYPE=agent PUPPET_GEM_VERSION="~> 6.0" BEAKER_IS_PE=no BEAKER_PUPPET_COLLECTION=puppet6 BEAKER_setfile=centos7-64 BEAKER_HYPERVISOR=docker BEAKER_debug=true
     services: docker
     sudo: required
   - rvm: 2.3.4
